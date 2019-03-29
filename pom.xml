@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.tdchain</groupId>
+    <artifactId>jbcc-samples</artifactId>
+    <name>jbcc-samples</name>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <jbcc.version>2.0.2</jbcc.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!--引入jbcc的依赖-->
+        <!-- https://mvnrepository.com/artifact/cn.tdchain/jbcc -->
+        <dependency>
+            <groupId>cn.tdchain</groupId>
+            <artifactId>jbcc</artifactId>
+            <version>${jbcc.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <goals>
+                    <goal>compile</goal>
+                </goals>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <developers>
+        <developer>
+            <id>cloud-blockchain</id>
+            <name>cloud blockchain team</name>
+            <email>cloud-blockchain@tiandetech.com</email>
+            <organization>Copyright © 2019 Beijing Tiande Technologies Co., Ltd</organization>
+            <organizationUrl>http://www.tdchain.cn/</organizationUrl>
+        </developer>
+    </developers>
+
+</project>
