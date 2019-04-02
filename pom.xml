@@ -4,6 +4,11 @@
         xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
+    <description>
+        jbcc-samples:
+        samples of jbcc sdk , jbcc使用样例
+    </description>
+
     <groupId>cn.tdchain</groupId>
     <artifactId>jbcc-samples</artifactId>
     <name>jbcc-samples</name>
@@ -16,14 +21,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-
-        <!--引入jbcc的依赖-->
-        <!-- https://mvnrepository.com/artifact/cn.tdchain/jbcc -->
+        <!--jbcc sdk-->
         <dependency>
             <groupId>cn.tdchain</groupId>
             <artifactId>jbcc</artifactId>

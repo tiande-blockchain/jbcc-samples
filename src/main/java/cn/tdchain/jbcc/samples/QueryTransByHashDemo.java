@@ -14,9 +14,10 @@ public class QueryTransByHashDemo extends BaseDemo {
     public static void main(String[] args) {
 
         try {
-            String hash = "1_170c13d9ddc7e61f18e9fa2d7e9e9632075dbc68d742398e18126d08fd8c29c8";
+            //# 交易hash
+            String hash = "22_3ee5f300e77beddec41e2ff66d247f0a77db93117231765881e2e2d820c7bff7";
+            //# 向云区块链服务执行查询操作
             Trans result = connection.getTransByHash(hash);
-
             if (result != null) {
                 if (result.getHash().equals(hash)) {
                     System.out.println("\n===> query trans success by hash.");

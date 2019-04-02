@@ -19,15 +19,17 @@ public class AddTransDemo extends BaseDemo {
     public static void main(String[] args) {
 
         try {
-            Trans t = trans();
-            //# add a trans
-            Trans result = connection.addTrans(t);
+            //# 构建出一笔交易信息
+            Trans trans = trans();
+            //# 发起一笔交易到云区块链服务中
+            Trans result = connection.addTrans(trans);
             if (result != null) {
+                //# 根据返回结果状态判断是否成功
                 if (result.getStatus() == Trans.TransStatus.success) {
                     System.out.println("\n===> add trans success.");
                 }
             } else {
-                System.out.println("\n===> . add trans fail.");
+                System.out.println("\n===> add trans fail.");
             }
 
             Tools.printResult(result);
