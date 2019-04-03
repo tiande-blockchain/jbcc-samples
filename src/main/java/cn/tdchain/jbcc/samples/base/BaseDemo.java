@@ -29,20 +29,24 @@ public abstract class BaseDemo {
     //# keystore文件的密码
     protected final static String keystorePasswd = "123456";
 
-    protected static ConnectionFactory factory = null;
-    static {
-        //# 构建配置信息
-        factory = ConnectionFactory.ConnectionConfig.builder()
-                .iptables(iptables)
-                //.port(port)  //# 不配置即使用默认值 18088
-                //.timeout(timeout)  //# 不配置即使用默认3秒
-                .token(token)
-                .keystorePtah(keystorePath)
-                .keystorePassword(keystorePasswd)
-                .keystoreAlia(keystoreAlia).build();
-
-    }
-
     //# 声明一个全局连接器connection
-    public static Connection connection = factory.getConnection();
+    public static Connection connection = null;
+
+    static {
+        try {
+            //# 构建配置信息
+            ConnectionFactory factory = ConnectionFactory.ConnectionConfig.builder()
+                    .iptables(iptables)
+                    //.port(port)  //# 不配置即使用默认值 18088
+                    //.timeout(timeout)  //# 不配置即使用默认3秒
+                    .token(token)
+                    .keystorePtah(keystorePath)
+                    .keystorePassword(keystorePasswd)
+                    .keystoreAlia(keystoreAlia).build();
+
+            connection = factory.getConnection();
+        } catch (Exception e) {
+            System.out.println("error: 请检查配置===> " + e.getMessage() + " detail: " + e.toString());
+        }
+    }
 }
