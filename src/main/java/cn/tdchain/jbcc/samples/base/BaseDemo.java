@@ -24,8 +24,6 @@ public abstract class BaseDemo {
     protected final static String token = "JFB13JBS7Z7NMZRSII643JF3TPI2MNBR66";
     //# 访问天德云区块链时需要的授权文件,登录成功之后即可下载证书, keystorePath为证书存放路径
     protected final static String keystorePath = "D:\\keys\\rsa\\rsa_tiande_client.pfx";
-    //# 证书别名
-    protected final static String keystoreAlia = "tdcert";
     //# keystore文件的密码
     protected final static String keystorePasswd = "123456";
 
@@ -41,8 +39,7 @@ public abstract class BaseDemo {
                     //.timeout(timeout)  //# 不配置即使用默认3秒
                     .token(token)
                     .keystorePtah(keystorePath)
-                    .keystorePassword(keystorePasswd)
-                    .keystoreAlia(keystoreAlia).build();
+                    .keystorePassword(keystorePasswd).build();
 
             connection = factory.getConnection();
         } catch (Exception e) {
