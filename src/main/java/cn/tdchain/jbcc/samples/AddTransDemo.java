@@ -23,11 +23,9 @@ public class AddTransDemo extends BaseDemo {
             Trans trans = trans();
             //# 发起一笔交易到云区块链服务中
             Trans result = connection.addTrans(trans);
-            if (result != null) {
+            if (result != null && result.getStatus() == Trans.TransStatus.success) {
                 //# 根据返回结果状态判断是否成功
-                if (result.getStatus() == Trans.TransStatus.success) {
-                    System.out.println("\n===> add trans success.");
-                }
+                System.out.println("\n===> add trans success.");
             } else {
                 System.out.println("\n===> add trans fail.");
             }

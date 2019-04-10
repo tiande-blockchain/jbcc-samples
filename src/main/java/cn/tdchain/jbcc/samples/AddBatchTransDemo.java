@@ -25,10 +25,8 @@ public class AddBatchTransDemo extends BaseDemo {
             BatchTrans<Trans> batchTrans = transList();
             //# add batch trade
             BatchTrans<Trans> result = connection.addBatchTrans(batchTrans);
-            if (result != null) {
-                if (result.getStatus() == Trans.TransStatus.success) {
-                    System.out.println("\n===> batch trans success.");
-                }
+            if (result != null && result.getStatus() == Trans.TransStatus.success) {
+                System.out.println("\n===> batch trans success.");
             } else {
                 System.out.println("\n===> batch trans fail.");
             }
@@ -46,7 +44,7 @@ public class AddBatchTransDemo extends BaseDemo {
      * @return
      */
     public static BatchTrans<Trans> transList() {
-        int transCount = 5;
+        int transCount = 10;
         List<Trans> transList = new ArrayList<>(transCount);
         Trans trans = null;
         for (int i = 0; i < transCount; i++) {
