@@ -35,8 +35,8 @@ public abstract class BaseDemo {
             //# 构建配置信息
             ConnectionFactory factory = ConnectionFactory.ConnectionConfig.builder()
                     .iptables(iptables)
-                    //.port(port)  //# 不配置即使用默认值 18088
-                    //.timeout(timeout)  //# 不配置即使用默认3秒
+                    .port(port)  //# 不配置即使用默认值 18088
+                    .timeout(timeout)  //# 不配置即使用默认3秒
                     .token(token)
                     .keystorePtah(keystorePath)
                     .keystorePassword(keystorePasswd).build();

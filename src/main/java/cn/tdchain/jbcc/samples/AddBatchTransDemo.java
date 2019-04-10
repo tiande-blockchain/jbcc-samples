@@ -1,6 +1,7 @@
 package cn.tdchain.jbcc.samples;
 
 import cn.tdchain.Trans;
+import cn.tdchain.TransHead;
 import cn.tdchain.jbcc.BatchTrans;
 import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
@@ -24,7 +25,7 @@ public class AddBatchTransDemo extends BaseDemo {
         try {
             BatchTrans<Trans> batchTrans = transList();
             //# add batch trade
-            BatchTrans<Trans> result = connection.addBatchTrans(batchTrans);
+            BatchTrans<TransHead> result = connection.addBatchTrans(batchTrans);
             if (result != null && result.getStatus() == Trans.TransStatus.success) {
                 System.out.println("\n===> batch trans success.");
             } else {
