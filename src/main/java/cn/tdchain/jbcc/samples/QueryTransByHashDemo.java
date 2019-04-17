@@ -20,12 +20,12 @@ public class QueryTransByHashDemo extends BaseDemo {
             Trans result = connection.getTransByHash(hash);
             if (result != null) {
                 if (result.getHash().equals(hash)) {
-                    System.out.println("\n===> query trans success by hash.");
+                    log.info("\n===> query trans success by hash.");
                 } else {
-                    System.out.println("\n===> query trans fail by hash.");
+                    log.info("\n===> query trans fail by hash.");
                 }
             } else {
-                System.out.println("\nnot fount trans .");
+                log.info("\nnot fount trans .");
             }
 
             Tools.printResult(result);

@@ -26,9 +26,9 @@ public class AddTransDemo extends BaseDemo {
             TransHead result = connection.addTrans(trans);
             if (result != null && result.getStatus() == Trans.TransStatus.success) {
                 //# 根据返回结果状态判断是否成功
-                System.out.println("\n===> add trans success.");
+                log.info("\n===> add trans success.");
             } else {
-                System.out.println("\n===> add trans fail.");
+                log.info("\n===> add trans fail.");
             }
 
             Tools.printResult(result);

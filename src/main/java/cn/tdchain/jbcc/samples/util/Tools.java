@@ -1,6 +1,8 @@
 package cn.tdchain.jbcc.samples.util;
 
 import com.alibaba.fastjson.JSON;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * function：tools
@@ -8,6 +10,8 @@ import com.alibaba.fastjson.JSON;
  * author：warne
  */
 public abstract class Tools {
+    protected final static Logger log = LoggerFactory.getLogger("jbcc-samples");
+
     /**
      * foamat josn
      *
@@ -16,7 +20,7 @@ public abstract class Tools {
     public static String printResult(Object obj) {
         StringBuffer result = new StringBuffer();
         if (obj == null) {
-            System.out.println("result:\r\n" + result + "\r\n");
+            log.info("result:\r\n {} \r\n" , result );
             return null;
         }
         String json = JSON.toJSONString(obj);
@@ -49,7 +53,7 @@ public abstract class Tools {
             }
         }
 
-        System.out.println("result:\r\n" + result + "\r\n");
+        log.info("result:\r\n {} \r\n" , result );
 
         return result.toString();
     }

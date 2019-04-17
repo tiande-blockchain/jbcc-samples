@@ -18,7 +18,7 @@ public class QueryTransByTypeDemo extends BaseDemo {
         String type = "Test";
         try {
             List<Trans> transList = connection.getTransListByType(type);
-            System.out.println("\n===> query result: ");
+            log.info("\n===> query result: ");
 
             Tools.printResult(transList);
         } catch (Exception e) {

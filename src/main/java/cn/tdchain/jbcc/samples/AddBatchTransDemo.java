@@ -27,9 +27,9 @@ public class AddBatchTransDemo extends BaseDemo {
             //# add batch trade
             BatchTrans<TransHead> result = connection.addBatchTrans(batchTrans);
             if (result != null && result.getStatus() == Trans.TransStatus.success) {
-                System.out.println("\n===> batch trans success.");
+                log.info("\n===> batch trans success.");
             } else {
-                System.out.println("\n===> batch trans fail.");
+                log.info("\n===> batch trans fail.");
             }
 
             Tools.printResult(result);

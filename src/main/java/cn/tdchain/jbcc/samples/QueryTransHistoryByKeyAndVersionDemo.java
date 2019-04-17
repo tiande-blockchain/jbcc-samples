@@ -20,7 +20,7 @@ public class QueryTransHistoryByKeyAndVersionDemo extends BaseDemo {
         int endIndex = 30;
         try {
             List<Trans> transList = connection.getTransHistoryByKey(key, startIndex, endIndex);
-            System.out.println("\n===> query result: ");
+            log.info("\n===> query result: ");
 
             Tools.printResult(transList);
         } catch (Exception e) {

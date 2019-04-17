@@ -18,10 +18,10 @@ public class QueryNewTransByKeyDemo extends BaseDemo {
             Trans newTrans = connection.getNewTransByKey(key);
             if (newTrans != null) {
                 if (newTrans.getKey().equals(key)) {
-                    System.out.println("\n===> query new trans success.");
+                    log.info("\n===> query new trans success.");
                 }
             } else {
-                System.out.println("\n===> query new trans fail.");
+                log.info("\n===> query new trans fail.");
             }
             Tools.printResult(newTrans);
         } catch (Exception e) {

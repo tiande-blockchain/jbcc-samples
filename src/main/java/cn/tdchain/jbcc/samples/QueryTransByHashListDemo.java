@@ -25,7 +25,7 @@ public class QueryTransByHashListDemo extends BaseDemo {
                     "5_34ff5fa355c15ca37d379efd6abc1f0ca21bcec6ae8c3e635f625af9dd9c6a44");
 
             List<Trans> transList = connection.getTransListByHashList(hashList);
-            System.out.println("\n===> query result: ");
+            log.info("\n===> query result: ");
 
             Tools.printResult(transList);
         } catch (Exception e) {

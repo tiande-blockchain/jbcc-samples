@@ -22,10 +22,10 @@ public class OpenTransactionDemo extends BaseDemo {
             //# open transaction
             boolean success = connection.startTransaction(keys);
             if (success) {
-                System.out.println("\n===> open tansaction success. ");
+                log.info("\n===> open tansaction success. ");
                 connection.addBatchTrans(batchTrans);
             } else {
-                System.out.println("===>\nopen tansaction fail. ");
+                log.info("===>\nopen tansaction fail. ");
             }
             //# release lock-transaction
             connection.stopTransaction(keys);

@@ -17,9 +17,9 @@ public class QueryMaxBlockDemo extends BaseDemo {
         try {
             Block<Trans> maxBlock = connection.getMaxBlock();
             if (maxBlock != null) {
-                System.out.println("\n===> query max block success.");
+                log.info("\n===> query max block success.");
             } else {
-                System.out.println("\n===> query max block fail.");
+                log.info("\n===> query max block fail.");
             }
 
             Tools.printResult(maxBlock);

@@ -3,6 +3,8 @@ package cn.tdchain.jbcc.samples.base;
 
 import cn.tdchain.jbcc.Connection;
 import cn.tdchain.jbcc.ConnectionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * function：description
@@ -10,6 +12,8 @@ import cn.tdchain.jbcc.ConnectionFactory;
  * author：warne
  */
 public abstract class BaseDemo {
+
+    protected final static Logger log = LoggerFactory.getLogger("jbcc-samples");
     /**
      * 云区块链服务节点ip列表，当前是测试环境，所以只配置了一个节点，
      * 若为正式环境时，此处应为多个节点，eg:
@@ -43,7 +47,7 @@ public abstract class BaseDemo {
 
             connection = factory.getConnection();
         } catch (Exception e) {
-            System.out.println("error: 请检查配置===> " + e.getMessage() + " detail: " + e.toString());
+            log.info("请检查配置===> error: {}", e);
         }
     }
 }

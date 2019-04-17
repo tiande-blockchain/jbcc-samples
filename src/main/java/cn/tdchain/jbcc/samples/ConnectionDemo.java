@@ -2,6 +2,8 @@ package cn.tdchain.jbcc.samples;
 
 import cn.tdchain.jbcc.Connection;
 import cn.tdchain.jbcc.ConnectionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * function：connection实例的获取方式
@@ -10,6 +12,7 @@ import cn.tdchain.jbcc.ConnectionFactory;
  * author：warne
  */
 public class ConnectionDemo {
+    protected final static Logger log = LoggerFactory.getLogger("jbcc-samples");
 
     /**
      * 云区块链服务节点ip列表，当前是测试环境，所以只配置了一个节点，
@@ -42,9 +45,9 @@ public class ConnectionDemo {
         //# 获取连接器实例
         Connection connection = factory.getConnection();
 
-        System.out.println("connection is " + connection);
+        log.info("connection is {}", connection);
         connection = factory.getConnection();
-        System.out.println("connection is " + connection);
+        log.info("connection is {}", connection);
 
         //# 构建配置信息
         factory = builder.iptables(iptables)
@@ -56,7 +59,7 @@ public class ConnectionDemo {
 
         //# 获取连接器实例
         connection = factory.getConnection();
-        System.out.println("connection is " + connection);
+        log.info("connection is {}", connection);
 
     }
 }
