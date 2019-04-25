@@ -17,24 +17,26 @@ import java.util.Map;
  */
 public class AddTransDemo extends BaseDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        try {
-            //# 构建出一笔交易信息
-            Trans trans = trans();
-            //# 发起一笔交易到云区块链服务中
-            TransHead result = connection.addTrans(trans);
-            if (result != null && result.getStatus() == Trans.TransStatus.success) {
-                //# 根据返回结果状态判断是否成功
-                log.info("\n===> add trans success.");
-            } else {
-                log.info("\n===> add trans fail.");
-            }
-
-            Tools.printResult(result);
-        } catch (Exception e) {
-            e.printStackTrace();
+        for (int i = 0; i < 3; i++) {
+            sendTrans();
         }
+    }
+
+    public static void sendTrans() {
+        //# 构建出一笔交易信息
+        Trans trans = trans();
+        //# 发起一笔交易到云区块链服务中
+        TransHead result = connection.addTrans(trans);
+        if (result != null && result.getStatus() == Trans.TransStatus.success) {
+            //# 根据返回结果状态判断是否成功
+            log.info("\n===> add trans success.");
+        } else {
+            log.info("\n===> add trans fail.");
+        }
+
+        Tools.printResult(result);
     }
 
     /**

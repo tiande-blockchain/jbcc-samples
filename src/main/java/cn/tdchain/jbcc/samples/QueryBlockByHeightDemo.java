@@ -14,7 +14,12 @@ public class QueryBlockByHeightDemo extends BaseDemo {
 
     public static void main(String[] args) {
 
-        long height = 2;
+        for (int i = 1; i < 3; i++) {
+            blockByHeight(Long.valueOf(i));
+        }
+    }
+
+    public static void blockByHeight(long height) {
         try {
             Block<Trans> block = connection.getBlock(height);
             if (block != null) {

@@ -14,6 +14,12 @@ public class QueryMaxBlockDemo extends BaseDemo {
 
     public static void main(String[] args) {
 
+        for (int i = 1; i < 3; i++) {
+            maxBlock();
+        }
+    }
+
+    public static void maxBlock() {
         try {
             Block<Trans> maxBlock = connection.getMaxBlock();
             if (maxBlock != null) {

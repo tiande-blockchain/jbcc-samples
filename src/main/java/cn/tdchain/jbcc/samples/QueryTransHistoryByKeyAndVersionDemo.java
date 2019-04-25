@@ -15,9 +15,9 @@ public class QueryTransHistoryByKeyAndVersionDemo extends BaseDemo {
 
     public static void main(String[] args) {
 
-        String key = "warne";
-        int startIndex = 1;
-        int endIndex = 30;
+        String key = "xiaoming_5";
+        int startIndex = 0;
+        int endIndex = 10;
         try {
             List<Trans> transList = connection.getTransHistoryByKey(key, startIndex, endIndex);
             log.info("\n===> query result: ");

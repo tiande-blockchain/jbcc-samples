@@ -20,7 +20,7 @@ public abstract class Tools {
     public static String printResult(Object obj) {
         StringBuffer result = new StringBuffer();
         if (obj == null) {
-            log.info("result:\r\n {} \r\n" , result );
+            log.info("result:\r\n {} \r\n" , "null" );
             return null;
         }
         String json = JSON.toJSONString(obj);
