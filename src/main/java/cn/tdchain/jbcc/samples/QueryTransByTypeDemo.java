@@ -1,6 +1,7 @@
 package cn.tdchain.jbcc.samples;
 
 import cn.tdchain.Trans;
+import cn.tdchain.jbcc.rpc.RPCResult;
 import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
 
@@ -17,10 +18,11 @@ public class QueryTransByTypeDemo extends BaseDemo {
 
         String type = "Test";
         try {
-            List<Trans> transList = connection.getTransListByType(type);
+            RPCResult<List<Trans>> result = connection.getTransListByType(type);
+
             log.info("\n===> query result: ");
 
-            Tools.printResult(transList);
+            Tools.printResult(result.getEntity());
         } catch (Exception e) {
             e.printStackTrace();
         }

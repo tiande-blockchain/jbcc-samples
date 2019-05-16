@@ -1,6 +1,7 @@
 package cn.tdchain.jbcc.samples;
 
 import cn.tdchain.Trans;
+import cn.tdchain.jbcc.rpc.RPCResult;
 import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
 
@@ -15,15 +16,16 @@ public class QueryNewTransByKeyDemo extends BaseDemo {
 
         String key = "warne";
         try {
-            Trans newTrans = connection.getNewTransByKey(key);
-            if (newTrans != null) {
-                if (newTrans.getKey().equals(key)) {
+            RPCResult<Trans> result = connection.getNewTransByKey(key);
+
+            if (result.succes()) {
+                if (result.getEntity().getKey().equals(key)) {
                     log.info("\n===> query new trans success.");
                 }
             } else {
                 log.info("\n===> query new trans fail.");
             }
-            Tools.printResult(newTrans);
+            Tools.printResult(result.getEntity());
         } catch (Exception e) {
             e.printStackTrace();
         }

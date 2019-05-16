@@ -9,6 +9,7 @@
 
 package cn.tdchain.jbcc.samples;
 
+import cn.tdchain.jbcc.rpc.RPCResult;
 import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
 
@@ -22,8 +23,8 @@ public class QueryTotalTransCountDemo extends BaseDemo {
     public static void main(String[] args) {
 
         try {
-            Long totalTransCount = connection.getTotalTransCount();
-            Tools.printResult(totalTransCount);
+            RPCResult<Long> result = connection.getTotalTransCount();
+            Tools.printResult(result.getEntity());
         } catch (Exception e) {
             e.printStackTrace();
         }
