@@ -1,7 +1,7 @@
 package cn.tdchain.jbcc.samples;
 
 import cn.tdchain.Trans;
-import cn.tdchain.jbcc.rpc.RPCResult;
+import cn.tdchain.jbcc.Result;
 import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
 
@@ -20,7 +20,7 @@ public class QueryTransHistoryByKeyAndVersionDemo extends BaseDemo {
         int startIndex = 0;
         int endIndex = 10;
         try {
-            RPCResult<List<Trans>> result = connection.getTransHistoryByKey(key, startIndex, endIndex);
+            Result<List<Trans>> result = connection.getTransHistoryByKey(key, startIndex, endIndex);
             log.info("\n===> query result: ");
 
             Tools.printResult(result.getEntity());

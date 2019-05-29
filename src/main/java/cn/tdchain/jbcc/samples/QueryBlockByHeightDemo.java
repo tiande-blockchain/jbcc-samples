@@ -1,7 +1,7 @@
 package cn.tdchain.jbcc.samples;
 
 import cn.tdchain.Block;
-import cn.tdchain.jbcc.rpc.RPCResult;
+import cn.tdchain.jbcc.Result;
 import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
 
@@ -21,9 +21,9 @@ public class QueryBlockByHeightDemo extends BaseDemo {
 
     public static void blockByHeight(long height) {
         try {
-            RPCResult<Block> result = connection.getBlock(height);
+            Result<Block> result = connection.getBlock(height);
 
-            if (result.succes()) {
+            if (result.isSuccess()) {
                 if (result.getEntity().getHeight().equals(height)) {
                     log.info("\n===> query max block success.");
                 }

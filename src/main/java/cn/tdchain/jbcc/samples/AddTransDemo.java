@@ -2,7 +2,7 @@ package cn.tdchain.jbcc.samples;
 
 import cn.tdchain.Trans;
 import cn.tdchain.TransHead;
-import cn.tdchain.jbcc.rpc.RPCResult;
+import cn.tdchain.jbcc.Result;
 import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
 import com.alibaba.fastjson.JSON;
@@ -29,9 +29,9 @@ public class AddTransDemo extends BaseDemo {
         //# 构建出一笔交易信息
         Trans trans = trans();
         //# 发起一笔交易到云区块链服务中
-        RPCResult<TransHead> result = connection.addTrans(trans);
+        Result<TransHead> result = connection.addTrans(trans);
 
-        if (result.succes()) {
+        if (result.isSuccess()) {
             //# 根据返回结果状态判断是否成功
             log.info("\n===> add trans success.");
         } else {

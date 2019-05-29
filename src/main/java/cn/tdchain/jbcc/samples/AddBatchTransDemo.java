@@ -3,7 +3,7 @@ package cn.tdchain.jbcc.samples;
 import cn.tdchain.Trans;
 import cn.tdchain.TransHead;
 import cn.tdchain.jbcc.BatchTrans;
-import cn.tdchain.jbcc.rpc.RPCResult;
+import cn.tdchain.jbcc.Result;
 import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
 import com.alibaba.fastjson.JSON;
@@ -26,9 +26,9 @@ public class AddBatchTransDemo extends BaseDemo {
         try {
             BatchTrans<Trans> batchTrans = transList();
             //# add batch trade
-            RPCResult<BatchTrans<TransHead>> result = connection.addBatchTrans(batchTrans);
+            Result<BatchTrans<TransHead>> result = connection.addBatchTrans(batchTrans);
 
-            if (result.succes()) {
+            if (result.isSuccess()) {
                 log.info("\n===> batch trans success.");
             } else {
                 log.info("\n===> batch trans fail.");

@@ -1,7 +1,7 @@
 package cn.tdchain.jbcc.samples;
 
 import cn.tdchain.Trans;
-import cn.tdchain.jbcc.rpc.RPCResult;
+import cn.tdchain.jbcc.Result;
 import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
 
@@ -25,7 +25,7 @@ public class QueryTransByHashListDemo extends BaseDemo {
                     "43ae2352a6a3b7c7c41fddeaafe0f9795fb517483e8976a38461226fa45928614",
                     "34ff5fa355c15ca37d379efd6abc1f0ca21bcec6ae8c3e635f625af9dd9c6a445");
 
-            RPCResult<List<Trans>> result = connection.getTransListByHashList(hashList);
+            Result<List<Trans>> result = connection.getTransListByHashList(hashList);
             log.info("\n===> query result: ");
 
             Tools.printResult(result.getEntity());
