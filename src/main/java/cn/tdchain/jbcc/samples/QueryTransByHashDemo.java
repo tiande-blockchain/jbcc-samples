@@ -16,7 +16,7 @@ public class QueryTransByHashDemo extends BaseDemo {
 
         try {
             //# 交易hash
-            String hash = "22_3ee5f300e77beddec41e2ff66d247f0a77db93117231765881e2e2d820c7bff7";
+            String hash = "3ee5f300e77beddec41e2ff66d247f0a77db93117231765881e2e2d820c7bff72";
             //# 向云区块链服务执行查询操作
             Result<Trans> result = connection.getTransByHash(hash);
 
