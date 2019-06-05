@@ -30,7 +30,7 @@ public class QueryBlockByHeightDemo extends BaseDemo {
             } else {
                 log.info("\n===> query max block fail.");
             }
-            Tools.printResult(result.getEntity());
+            Tools.printResult(result);
         } catch (Exception e) {
             e.printStackTrace();
         }

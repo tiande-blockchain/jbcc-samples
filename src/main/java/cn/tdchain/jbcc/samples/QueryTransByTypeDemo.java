@@ -22,7 +22,7 @@ public class QueryTransByTypeDemo extends BaseDemo {
 
             log.info("\n===> query result: ");
 
-            Tools.printResult(result.getEntity());
+            Tools.printResult(result);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -38,7 +38,7 @@ public class AddTransDemo extends BaseDemo {
             log.info("\n===> add trans fail.");
         }
 
-        Tools.printResult(result.getEntity());
+        Tools.printResult(result);
     }
 
     /**

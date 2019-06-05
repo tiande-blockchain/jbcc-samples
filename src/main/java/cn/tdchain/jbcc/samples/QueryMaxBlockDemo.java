@@ -29,7 +29,7 @@ public class QueryMaxBlockDemo extends BaseDemo {
                 log.info("\n===> query max block fail.");
             }
 
-            Tools.printResult(result.getEntity());
+            Tools.printResult(result);
         } catch (Exception e) {
             e.printStackTrace();
         }

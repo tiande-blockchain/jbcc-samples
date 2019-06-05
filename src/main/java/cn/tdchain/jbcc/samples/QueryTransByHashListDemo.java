@@ -28,7 +28,7 @@ public class QueryTransByHashListDemo extends BaseDemo {
             Result<List<Trans>> result = connection.getTransListByHashList(hashList);
             log.info("\n===> query result: ");
 
-            Tools.printResult(result.getEntity());
+            Tools.printResult(result);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -25,7 +25,7 @@ public class QueryNewTransByKeyDemo extends BaseDemo {
             } else {
                 log.info("\n===> query new trans fail.");
             }
-            Tools.printResult(result.getEntity());
+            Tools.printResult(result);
         } catch (Exception e) {
             e.printStackTrace();
         }

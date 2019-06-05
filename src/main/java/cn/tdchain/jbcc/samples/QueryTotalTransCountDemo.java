@@ -24,7 +24,7 @@ public class QueryTotalTransCountDemo extends BaseDemo {
 
         try {
             Result<Long> result = connection.getTotalTransCount();
-            Tools.printResult(result.getEntity());
+            Tools.printResult(result);
         } catch (Exception e) {
             e.printStackTrace();
         }

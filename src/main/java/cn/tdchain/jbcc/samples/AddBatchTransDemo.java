@@ -24,17 +24,20 @@ public class AddBatchTransDemo extends BaseDemo {
     public static void main(String[] args) {
 
         try {
-            BatchTrans<Trans> batchTrans = transList();
-            //# add batch trade
-            Result<BatchTrans<TransHead>> result = connection.addBatchTrans(batchTrans);
+            for (int i = 0; i < 100; i++) {
+                BatchTrans<Trans> batchTrans = transList();
+                //# add batch trade
+                Result<BatchTrans<TransHead>> result = connection.addBatchTrans(batchTrans);
 
-            if (result.isSuccess()) {
-                log.info("\n===> batch trans success.");
-            } else {
-                log.info("\n===> batch trans fail.");
+                if (result.isSuccess()) {
+                    log.info("\n===> batch trans success.");
+                } else {
+                    log.info("\n===> batch trans fail.");
+                }
+
+                Tools.printResult(result);
             }
 
-            Tools.printResult(result.getEntity());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -47,7 +50,7 @@ public class AddBatchTransDemo extends BaseDemo {
      * @return
      */
     public static BatchTrans<Trans> transList() {
-        int transCount = 10;
+        int transCount = 50;
         List<Trans> transList = new ArrayList<>(transCount);
         Trans trans = null;
         for (int i = 0; i < transCount; i++) {

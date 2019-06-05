@@ -23,7 +23,7 @@ public class QueryTransHistoryByKeyAndVersionDemo extends BaseDemo {
             Result<List<Trans>> result = connection.getTransHistoryByKey(key, startIndex, endIndex);
             log.info("\n===> query result: ");
 
-            Tools.printResult(result.getEntity());
+            Tools.printResult(result);
         } catch (Exception e) {
             e.printStackTrace();
         }
