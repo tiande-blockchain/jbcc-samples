@@ -7,6 +7,7 @@ import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
 import com.alibaba.fastjson.JSON;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,9 +19,9 @@ import java.util.Map;
  */
 public class AddTransDemo extends BaseDemo {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
             sendTrans();
         }
     }
@@ -55,6 +56,7 @@ public class AddTransDemo extends BaseDemo {
         data.put("where", "I am tian de technology.");
         trans.setData(JSON.toJSONString(data));
         trans.setType("Test");
+        trans.setTimestamp(new Date().toString());
 
         return trans;
     }

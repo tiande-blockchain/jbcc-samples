@@ -24,7 +24,7 @@ public class AddBatchTransDemo extends BaseDemo {
     public static void main(String[] args) {
 
         try {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 3; i++) {
                 BatchTrans<Trans> batchTrans = transList();
                 //# add batch trade
                 Result<BatchTrans<TransHead>> result = connection.addBatchTrans(batchTrans);
@@ -50,7 +50,7 @@ public class AddBatchTransDemo extends BaseDemo {
      * @return
      */
     public static BatchTrans<Trans> transList() {
-        int transCount = 50;
+        int transCount = 3;
         List<Trans> transList = new ArrayList<>(transCount);
         Trans trans = null;
         for (int i = 0; i < transCount; i++) {

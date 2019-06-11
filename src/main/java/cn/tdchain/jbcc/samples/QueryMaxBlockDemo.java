@@ -1,6 +1,7 @@
 package cn.tdchain.jbcc.samples;
 
 import cn.tdchain.Block;
+import cn.tdchain.Trans;
 import cn.tdchain.jbcc.Result;
 import cn.tdchain.jbcc.samples.base.BaseDemo;
 import cn.tdchain.jbcc.samples.util.Tools;
@@ -21,7 +22,7 @@ public class QueryMaxBlockDemo extends BaseDemo {
 
     public static void maxBlock() {
         try {
-            Result<Block> result = connection.getMaxBlock();
+            Result<Block<Trans>> result = connection.getMaxBlock();
 
             if (result.isSuccess()) {
                 log.info("\n===> query max block success.");
