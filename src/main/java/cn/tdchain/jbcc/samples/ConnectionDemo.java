@@ -47,7 +47,7 @@ public class ConnectionDemo {
                 .port(port)
                 .timeout(3000)
                 .token(token)
-                .keystorePtah(keystorePath)
+                .keystorePath(keystorePath)
                 .keystorePassword(keystorePasswd).build();
 
         //# 获取连接器实例
@@ -66,7 +66,7 @@ public class ConnectionDemo {
                 .port(port)
                 .timeout(100)
                 .token(token)
-                .keystorePtah(keystorePath)
+                .keystorePath(keystorePath)
                 .keystorePassword(keystorePasswd).build();
 
         //# 获取连接器实例

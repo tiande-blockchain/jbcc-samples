@@ -23,7 +23,7 @@ public class QueryTotalTransCountDemo extends BaseDemo {
     public static void main(String[] args) {
 
         try {
-            Result<Long> result = connection.getTotalTransCount();
+            Result<Long> result = connection.getBlockChainTransCount();
             Tools.printResult(result);
         } catch (Exception e) {
             e.printStackTrace();

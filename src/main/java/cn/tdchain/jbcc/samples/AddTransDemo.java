@@ -56,7 +56,7 @@ public class AddTransDemo extends BaseDemo {
         data.put("where", "I am tian de technology.");
         trans.setData(JSON.toJSONString(data));
         trans.setType("Test");
-        trans.setTimestamp(new Date().toString());
+        trans.setTimestamp(new Date().getTime());
 
         return trans;
     }

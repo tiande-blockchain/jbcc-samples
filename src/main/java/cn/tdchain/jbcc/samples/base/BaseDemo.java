@@ -62,7 +62,7 @@ public abstract class BaseDemo {
                     .timeout(timeout)  //# 不配置即使用默认3秒
                     .token(token)
                     //.showPrint()
-                    .keystorePtah(keystorePath)
+                    .keystorePath(keystorePath)
                     .keystorePassword(keystorePasswd).build();
 
             connection = factory.getConnection();
