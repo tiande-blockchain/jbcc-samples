@@ -17,7 +17,8 @@
 | **[QueryTransByTypeDemo.java](https://github.com/tiande-blockchain/jbcc-samples/blob/master/src/main/java/cn/tdchain/jbcc/samples/QueryTransByTypeDemo.java)** | query transactions by type |    
 | **[QueryTransHistoryByKeyAndVersionDemo.java](https://github.com/tiande-blockchain/jbcc-samples/blob/master/src/main/java/cn/tdchain/jbcc/samples/QueryTransHistoryByKeyAndVersionDemo.java)** | query transaction history by key and version |    
 | **[OpenTransactionDemo.java](https://github.com/tiande-blockchain/jbcc-samples/blob/master/src/main/java/cn/tdchain/jbcc/samples/OpenTransactionDemo.java)** | transtaction management |    
-| **[QueryTotalTransCountDemo.java](https://github.com/tiande-blockchain/jbcc-samples/blob/master/src/main/java/cn/tdchain/jbcc/samples/QueryTotalTransCountDemo.java)** | query total trans count |    
+| **[QueryTotalTransCountDemo.java](https://github.com/tiande-blockchain/jbcc-samples/blob/master/src/main/java/cn/tdchain/jbcc/samples/QueryTotalTransCountDemo.java)** | query total trans count | 
+| **[BqlQueryTrans.java](https://github.com/tiande-blockchain/jbcc-samples/blob/master/src/main/java/cn/tdchain/jbcc/samples/BqlQueryTrans.java)** | query trans list by BQL(BlockChain Query Langage) |    
 
 ---
 #### Copyright © 2019 [Beijing Tiande Technologies](http://tdchain.cn/) Co., Ltd
